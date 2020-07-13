@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/cd76ad0e9d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="modal" class="modalContainer  show">
+      <div class="modal-content active" id="modalContent">
+        <div class="modal--title">
+          <span id="close" class="close">×</span>
+          <h2>Agregar Venta</h2>
+        </div>
+        <class class="modal--body">
+          <label for=""
+            >Vendedora
+            <select name="vendedora" id="vendedora">
+              <option value="Ada">Ada</option>
+              <option value="Grace">Grace</option>
+              <option value="Hedy">Hedy</option>
+              <option value="Sheryl">Sheryl</option>
+            </select>
+          </label>
+          <br />
+          <select name="componentes" id="componentes" multiple>
+            <option value="Monitor GPRS 3000">Monitor GPRS 3000</option>
+            <option value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
+            <option value="Monitor ASC 543">Monitor ASC 543</option>
+            <option value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
+          </select>
+          <br />
+          <label for=""
+            >sucursal
+            <select name="sucursal" id="sucursal">
+              <option value="Centro">Centro</option>
+              <option value="Caballito">Caballito</option>
+            </select>
+          </label>
+        </class>
+        <div class="modal--footer">
+          <button id="btn-cancel" class="btn btn-danger">cancel</button>
+          <button id="btn-add" class="btn btn-primary">add</button>
+        </div>
+      </div>
+    </div>
+      <div id="modalDelete" class="modalContainer  fade">
+        <div class="modal-content active" id="modalContentDelete">
+          <div class="modal--title">
+            <span id="closeDelete" class="close">×</span>
+            <h2>Borrar</h2>
+          </div>
+          <div class="modal--body">
+            <input type="hidden" name="" id="hiddenValueDelete">
+            Desea borrar esta venta
+          </div>
+          <div class="modal--footer">
+            <button id="btn-cancel-delete" class="btn btn-danger">Cerrar</button>
+            <button id="btn-delete" class="btn btn-primary">Borrar</button>
+          </div>
+        </div>
+      </div>
+    <div class="container">
+      <table class="table">
+        <thead class="thead-dark">
+          <div class="table-tittle">
+
+              <h2>Ventas</h2>
+              <button id="btn-modal" class="btn-color">
+                <i class="fas fa-plus-circle"></i>
+                Nueva venta
+              </button>
+      
+          </div>
+        </thead>
+        <tbody class="" id="table"></tbody>
+      </table>
+    </div>
+
+    <div class="container">
+      <table class="table">
+        <thead class="thead-dark">
+          <div class="table-tittle">
+            <div class="titulo">
+              <h2>Ventas por sucursal</h2>
+            </div>
+          </div>
+        </thead>
+        <tbody id="table-sucursal"></tbody>
+      </table>
+    </div>
+
+    <div id="table-wraper" class="table-wraper">
+      <p id="proStrella">Producto estrella: <span class="nombre">Monitor GPRS 3000</span></p>
+
+      <p id="vendedoraStrella">
+        Vendedora que más ingresos generó: <span class="nombre">Grace</span>
+      </p>
+    </div>
+
+  
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script src="dom.js"></script>
+  </body>
+</html>
+  </body>
+</html>
